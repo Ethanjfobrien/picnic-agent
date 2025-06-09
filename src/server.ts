@@ -10,12 +10,13 @@ import {
   type StreamTextOnFinishCallback,
   type ToolSet,
 } from "ai";
-import { openai } from "@ai-sdk/openai";
+// import { openai } from "@ai-sdk/openai";
+import { groq } from "@ai-sdk/groq";
 import { processToolCalls } from "./utils";
 import { tools, executions } from "./tools";
 // import { env } from "cloudflare:workers";
 
-const model = openai("gpt-4o-2024-11-20");
+const model = groq("meta-llama/llama-4-scout-17b-16e-instruct");
 // Cloudflare AI Gateway
 // const openai = createOpenAI({
 //   apiKey: env.OPENAI_API_KEY,
